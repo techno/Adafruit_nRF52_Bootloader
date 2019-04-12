@@ -82,7 +82,7 @@ remduplicates = $(strip $(if $1,$(firstword $1) $(call remduplicates,$(filter-ou
 #*********************************
 BOARD_LIST = $(sort $(subst .h,,$(subst src/boards/,,$(wildcard src/boards/*.h))))
 
-NRF52832_BOARDLIST = feather_nrf52832
+NRF52832_BOARDLIST = feather_nrf52832 puckjs
 IS_52832 = $(filter $(BOARD),$(NRF52832_BOARDLIST))
 
 ifeq ($(filter $(MAKECMDGOALS),all-board help),)
